@@ -179,18 +179,30 @@
   const steps = [...document.querySelectorAll('.step')];
   const numEl = document.querySelector('.process__num');
   const bar = document.querySelector('.process__bar i');
-  if (steps.length && 'IntersectionObserver' in window) {
-    const po = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        const i = steps.indexOf(e.target);
-        steps.forEach((s, j) => s.classList.toggle('is-active', j === i));
-        if (numEl) numEl.textContent = String(i + 1).padStart(2, '0');
-        if (bar) bar.style.setProperty('--p', ((i + 1) / steps.length).toFixed(3));
-      });
-    }, { rootMargin: '-45% 0px -45% 0px' });
-    steps.forEach(s => po.observe(s));
-    steps[0].classList.add('is-active');
+  // The active step is whichever one has crossed the reading line (just
+  // below mid-screen, level with the sticky counter). Computed from scroll
+  // position on every frame so fast scrolling never skips a step.
+  let activeStep = -1;
+  let stepTicking = false;
+  const setStep = i => {
+    if (i === activeStep) return;
+    activeStep = i;
+    steps.forEach((s, j) => s.classList.toggle('is-active', j === i));
+    if (numEl) numEl.textContent = String(i + 1).padStart(2, '0');
+    if (bar) bar.style.setProperty('--p', ((i + 1) / steps.length).toFixed(3));
+  };
+  const updateSteps = () => {
+    stepTicking = false;
+    const line = window.innerHeight * 0.55;
+    let i = 0;
+    steps.forEach((s, j) => { if (s.getBoundingClientRect().top <= line) i = j; });
+    setStep(i);
+  };
+  if (steps.length) {
+    const onStepScroll = () => { if (!stepTicking) { stepTicking = true; requestAnimationFrame(updateSteps); } };
+    window.addEventListener('scroll', onStepScroll, { passive: true });
+    window.addEventListener('resize', onStepScroll);
+    updateSteps();
   }
 
   // ---------- Who we work with: image swap on hover ----------
