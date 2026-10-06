@@ -162,7 +162,7 @@ em { font-style: normal; }
 }
 .nav__inner { height: 100%; display: flex; align-items: center; gap: 32px; }
 .nav__logo { display: block; color: var(--ink); flex: none; }
-.nav__logo svg { width: 196px; height: 34px; display: block; transition: width .5s var(--ease); }
+.nav__logo svg { width: 204px; height: 34px; display: block; transition: width .5s var(--ease); }
 .nav__links { display: flex; gap: clamp(20px, 2.6vw, 40px); margin-left: auto; }
 .nav__links a {
   position: relative; font-size: .9375rem; font-weight: 500; color: var(--ink); padding: 8px 0; transition: color .3s;
@@ -180,13 +180,13 @@ em { font-style: normal; }
   -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px);
   box-shadow: 0 1px 0 var(--line);
 }
-.nav.is-scrolled .nav__logo svg { width: 172px; }
-.nav.is-dark { background: rgba(24, 24, 24, .8); box-shadow: 0 1px 0 rgba(255,255,255,.08); --logo-inner: var(--graphite); }
+.nav.is-scrolled .nav__logo svg { width: 180px; }
+.nav.is-dark { background: rgba(24, 24, 24, .8); box-shadow: 0 1px 0 rgba(255,255,255,.08); }
 .nav.is-dark .nav__logo, .nav.is-dark .nav__links a { color: var(--on-dark); }
 .nav.is-dark .nav__links a:hover, .nav.is-dark .nav__links a.is-active { color: var(--orange); }
 .nav.is-dark .nav__cta { --bg: var(--orange); --fg: var(--graphite); --bg-h: #fff; --fg-h: var(--graphite); }
 .nav.is-dark .nav__toggle span { background: var(--on-dark); }
-.menu-open .nav.is-dark { background: var(--warm-white); --logo-inner: #fff; }
+.menu-open .nav.is-dark { background: var(--warm-white); }
 .menu-open .nav.is-dark .nav__logo { color: var(--ink); }
 .menu-open .nav.is-dark .nav__toggle span { background: var(--ink); }
 .nav__toggle { display: none; width: 44px; height: 44px; position: relative; margin-left: 8px; }
@@ -587,9 +587,9 @@ em { font-style: normal; }
 /* ==========================================================================
    14. Footer
    ========================================================================== */
-.footer { padding-top: clamp(72px, 8vw, 120px); padding-bottom: 32px; --logo-inner: var(--graphite); }
+.footer { padding-top: clamp(72px, 8vw, 120px); padding-bottom: 32px; }
 .footer__top { display: grid; grid-template-columns: 5fr 2.5fr 2fr 2.5fr; gap: 32px; padding-bottom: clamp(56px, 6vw, 88px); }
-.footer__logo { width: 210px; height: 36px; color: #fff; display: block; }
+.footer__logo { width: 216px; height: 36px; color: #fff; display: block; }
 .footer__co { margin-top: 24px; font-weight: 700; color: #fff; }
 .footer__desc { color: var(--on-dark-2); font-size: var(--fs-small); max-width: 36ch; margin-top: 6px; }
 .footer__col { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
@@ -612,7 +612,7 @@ em { font-style: normal; }
 @media (max-width: 1100px) {
   .nav__links { gap: 22px; }
   .nav__links a { font-size: .875rem; }
-  .nav__logo svg { width: 168px; }
+  .nav__logo svg { width: 176px; }
   .hero__copy { grid-column: 1 / span 7; }
   .hero__collage { grid-column: 8 / span 5; }
   .crow { grid-template-columns: 1fr 6fr 5fr; }
@@ -625,7 +625,7 @@ em { font-style: normal; }
   :root { --nav-h: 68px; --nav-h-s: 60px; }
   .nav__links, .nav__cta { display: none; }
   .nav__toggle { display: block; margin-left: auto; }
-  .nav__logo svg, .nav.is-scrolled .nav__logo svg { width: 164px; height: 30px; }
+  .nav__logo svg, .nav.is-scrolled .nav__logo svg { width: 180px; height: 30px; }
 
   .about__grid, .sec-head, .caps__layout, .process__grid, .global__head, .consult__head,
   .econ__head, .who__grid, .case, .cta__row { grid-template-columns: minmax(0, 1fr); }

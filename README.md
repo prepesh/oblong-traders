@@ -8,7 +8,8 @@ It is a static site with no build step and no dependencies: just HTML, CSS and v
 index.html          page markup (14 sections)
 css/styles.css      design tokens + all styles (responsive, reduced-motion)
 js/main.js          interactions (reveals, sticky lifecycle, capabilities, process, nav)
-assets/logo.svg     STAND-IN logo (see below)
+assets/logo.svg     logo (brand mark + wordmark)
+assets/logo-mark.svg  brand mark only
 assets/favicon.svg
 assets/img/         placeholder material studies + world dot map
 tools/generate_materials.py   regenerates the placeholder imagery (numpy + Pillow)
@@ -24,7 +25,6 @@ npx serve .        # or: python3 -m http.server 8080
 
 | What | Where | Notes |
 |---|---|---|
-| **Logo** | `assets/logo.svg` and the `<symbol id="logo">` at the top of `index.html` | The current mark is a stand-in drawn from the brief (orange oblong + wordmark). Swap in the official artwork and keep the orange as the source of truth for `--orange` in `css/styles.css`. |
 | **Photography** | `assets/img/*.jpg` | Procedurally generated *material studies* (leather, watch dial, ceramic, jewelry, metal, felt, packaging, steel, linen). Replace them with real product photography under the same filenames, ideally 1600×1200 or larger. |
 | **Case studies** | `#work` section | Clearly labelled placeholders. No client names, figures or results have been invented. |
 | **Contact details & socials** | Footer `#contact-details` | Bracketed placeholders like `[Email address]`, and social links currently pointing to `#`. |
