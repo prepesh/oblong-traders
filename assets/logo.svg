@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 40" role="img" aria-label="Oblong Traders">
+  <!-- Stand-in mark. Replace this file with the official Oblong Traders logo artwork. -->
+  <rect x="0" y="8" width="40" height="24" rx="12" fill="#F58220"/>
+  <rect x="9" y="15" width="22" height="10" rx="5" fill="#FFFFFF"/>
+  <text x="52" y="26" font-family="Manrope, Inter, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="1.2" fill="#292929">OBLONG</text>
+  <text x="134" y="26" font-family="Manrope, Inter, Arial, sans-serif" font-size="17" font-weight="400" letter-spacing="1.2" fill="#292929">TRADERS</text>
+</svg>
