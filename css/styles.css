@@ -29,9 +29,10 @@
   --on-dark-2: #A7A7A2;
 
   /* Type */
-  --font: "Manrope", "Inter", "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --fs-display: clamp(2.75rem, 1.2rem + 6.6vw, 8rem);
-  --fs-h1: clamp(2.9rem, 1.4rem + 5.6vw, 7.25rem);
+  --fs-h1: clamp(2.75rem, 1.2rem + 4.6vw, 6.25rem);
   --fs-h2: clamp(2.25rem, 1.3rem + 3.9vw, 5.25rem);
   --fs-h3: clamp(1.5rem, 1.1rem + 1.4vw, 2.4rem);
   --fs-lede: clamp(1.125rem, 1rem + .5vw, 1.4rem);
@@ -83,6 +84,11 @@ em { font-style: normal; }
 .i { width: 1.15em; height: 1.15em; flex: none; transition: transform .5s var(--ease); }
 
 /* ---------- Type primitives ---------- */
+/* Headlines and large type use the display face; body and UI stay in Inter */
+h1, h2, h3, .display, .h2, .cta__big, .cta__q, .cap__t, .who__list li, .life__stages .t,
+.menu__links a, .footer__statement, .process__num, .about__list dt {
+  font-family: var(--font-display);
+}
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: var(--fs-micro); font-weight: 700; letter-spacing: .16em; text-transform: uppercase;

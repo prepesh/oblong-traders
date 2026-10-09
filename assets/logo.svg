@@ -1,8 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" role="img" aria-label="Oblong Traders">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 40" role="img" aria-label="Oblong Traders">
   <g transform="scale(0.4762) translate(-22 -24)">
     <ellipse cx="61.4" cy="66" rx="45.8" ry="31.5" transform="rotate(-50 61.4 66)" fill="#F58220"/>
     <ellipse cx="121.7" cy="47.6" rx="11.7" ry="8.1" fill="#F58220"/>
   </g>
-  <text x="64" y="26" font-family="Manrope, Inter, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="1.2" fill="#292929">OBLONG</text>
-  <text x="146" y="26" font-family="Manrope, Inter, Arial, sans-serif" font-size="17" font-weight="400" letter-spacing="1.2" fill="#292929">TRADERS</text>
+  <text x="64" y="26" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="17" letter-spacing="1" fill="#292929"><tspan font-weight="800">OBLONG</tspan><tspan font-weight="400" dx="7">TRADERS</tspan></text>
 </svg>
