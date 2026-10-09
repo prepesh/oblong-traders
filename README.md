@@ -27,7 +27,7 @@ npx serve .        # or: python3 -m http.server 8080
 |---|---|---|
 | **Photography** | `assets/img/*.jpg` | Procedurally generated *material studies* (leather, watch dial, ceramic, jewelry, metal, felt, packaging, steel, linen). Replace them with real product photography under the same filenames, ideally 1600×1200 or larger. |
 | **Case studies** | `#work` section | Clearly labelled placeholders. No client names, figures or results have been invented. |
-| **Contact details & socials** | Footer `#contact-details` | Bracketed placeholders like `[Email address]`, and social links currently pointing to `#`. |
+| **Contact details & socials** | Footer `#contact-details` | `[Email address]` is still a placeholder, and social links currently point to `#`. Phone and office address are filled in. |
 | **Privacy / Terms** | Footer | Links point to `#`. |
 
 The world map in the sourcing section is an **illustrative** dot map with abstract routes, and its caption says so. It does not mark any offices, factories or markets. If you later confirm specific markets, add them there.
