@@ -36,5 +36,5 @@ The world map in the sourcing section is an **illustrative** dot map with abstra
 
 - **Colour:** Brand Orange `#F58220` (fills, lines, CTAs), `--orange-ink #DC6A0B` (large accent text on light), `--orange-text #B4560A` (small accent text on light, AA). Charcoal `#292929`, Graphite `#181818`, Warm White `#FAFAF8`, Soft Gray `#F2F2F0`. The palette stays mostly neutral, with orange as a restrained accent.
 - **Type:** Plus Jakarta Sans for headlines and Inter for body text (Google Fonts), with system fallbacks. Headlines use weight 700 with tight negative tracking. Orange is reserved for single key phrases.
-- **UI:** 2px radius, 1px borders, numbered editorial rows instead of cards, and a fill-sweep hover on buttons.
+- **UI:** pill-shaped buttons (fully rounded), 2px radius elsewhere, 1px borders, numbered editorial rows instead of cards, and a fill-sweep hover on buttons.
 - **Motion:** masked headline reveals, clip-path image reveals, a scroll-driven lifecycle line, a sticky process counter, subtle parallax and a page-load curtain. All of it is disabled under `prefers-reduced-motion`.
