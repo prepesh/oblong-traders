@@ -58,20 +58,39 @@
     document.body.style.overflow = open ? 'hidden' : '';
     if (open) {
       menu.hidden = false;
-      requestAnimationFrame(() => menu.classList.add('is-open'));
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        menu.classList.add('is-open');
+        menu.querySelector('.menu__close').focus({ preventScroll: true });
+      }));
     } else {
       menu.classList.remove('is-open');
-      setTimeout(() => { if (!menu.classList.contains('is-open')) menu.hidden = true; }, 700);
+      setTimeout(() => { if (!menu.classList.contains('is-open')) menu.hidden = true; }, 600);
     }
   };
+  const closeMenu = (refocus = true) => {
+    if (!menu.classList.contains('is-open')) return;
+    setMenu(false);
+    if (refocus) toggle.focus({ preventScroll: true });
+  };
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('is-open')) { setMenu(false); toggle.focus(); } });
-  desktop.addEventListener('change', e => { if (e.matches) setMenu(false); });
+  menu.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => closeMenu()));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => closeMenu(false)));
+  document.addEventListener('keydown', e => {
+    if (!menu.classList.contains('is-open')) return;
+    if (e.key === 'Escape') closeMenu();
+    if (e.key === 'Tab') {
+      // keep keyboard focus inside the open drawer
+      const f = [...menu.querySelectorAll('.menu__panel a, .menu__panel button')];
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+  desktop.addEventListener('change', e => { if (e.matches) closeMenu(false); });
 
   // Active nav link by section in view
-  const navLinks = [...document.querySelectorAll('.nav__links a')];
-  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const navLinks = [...document.querySelectorAll('.nav__links a, .menu__links a')];
+  const sections = [...new Set(navLinks.map(a => a.getAttribute('href')))].map(h => document.querySelector(h)).filter(Boolean);
   if ('IntersectionObserver' in window) {
     const so = new IntersectionObserver(entries => {
       entries.forEach(e => {

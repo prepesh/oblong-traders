@@ -44,15 +44,29 @@
   </header>
 
   <div class="menu" id="menu" hidden>
-    <nav class="menu__links" aria-label="Mobile">
-      <a href="#about"><span>01</span>About</a>
-      <a href="#capabilities"><span>02</span>Capabilities</a>
-      <a href="#sourcing"><span>03</span>Global Sourcing</a>
-      <a href="#consulting"><span>04</span>Consulting</a>
-      <a href="#industries"><span>05</span>Industries</a>
-    </nav>
-    <a class="btn btn--orange menu__cta" href="#contact">Start a Project <svg class="i"><use href="#arrow"/></svg></a>
-    <p class="menu__foot">Source Smarter. Build Better. Scale Globally.</p>
+    <div class="menu__backdrop" data-close></div>
+    <aside class="menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="menu__head">
+        <a class="menu__logo" href="#top" aria-label="Oblong Traders — home"><svg><use href="#logo"/></svg></a>
+        <button class="menu__close" type="button" aria-label="Close menu" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      </div>
+      <p class="menu__label">Menu</p>
+      <nav class="menu__links" aria-label="Mobile">
+        <a href="#about"><span>About</span><svg class="menu__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#capabilities"><span>Capabilities</span><svg class="menu__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#sourcing"><span>Global Sourcing</span><svg class="menu__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#consulting"><span>Consulting</span><svg class="menu__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#industries"><span>Industries</span><svg class="menu__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </nav>
+      <div class="menu__foot">
+        <a class="btn btn--orange menu__cta" href="#contact">Start a Project <svg class="i"><use href="#arrow"/></svg></a>
+        <div class="menu__contact">
+          <span class="menu__contact-k">Get in touch</span>
+          <a href="tel:+9779813114872">+977-9813114872</a>
+          <span>Jhamsikhel, Lalitpur</span>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <main id="main">
